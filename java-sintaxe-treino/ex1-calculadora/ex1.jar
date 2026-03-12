@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class MenuCalculadora {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        // Exibição do Menu
+        System.out.println("=== MENU DE OPÇÕES ===");
+        System.out.println("1. Somar dois números");
+        System.out.println("2. Subtrair dois números");
+        System.out.println("3. Multiplicar dois números");
+        System.out.println("4. Dividir dois números");
+        System.out.println("5. Raiz quadrada de um número");
+        System.out.print("Digite a opção desejada: ");
+        
+        int opcao = leitor.nextInt();
+        double n1, n2, resultado;
+
+        switch (opcao) {
+            case 1:
+                System.out.print("Digite o primeiro número: ");
+                n1 = leitor.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                n2 = leitor.nextDouble();
+                resultado = n1 + n2;
+                System.out.println("Soma: " + resultado);
+                break;
+
+            case 2:
+                System.out.print("Digite o primeiro número: ");
+                n1 = leitor.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                n2 = leitor.nextDouble();
+                resultado = n1 - n2;
+                System.out.println("Subtração: " + resultado);
+                break;
+
+            case 3:
+                System.out.print("Digite o primeiro número: ");
+                n1 = leitor.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                n2 = leitor.nextDouble();
+                resultado = n1 * n2;
+                System.out.println("Multiplicação: " + resultado);
+                break;
+
+            case 4:
+                System.out.print("Digite o primeiro número: ");
+                n1 = leitor.nextDouble();
+                System.out.print("Digite o segundo número: ");
+                n2 = leitor.nextDouble();
+                if (n2 != 0) {
+                    resultado = n1 / n2;
+                    System.out.println("Divisão: " + resultado);
+                } else {
+                    System.out.println("Erro: Divisão por zero não permitida.");
+                }
+                break;
+
+            case 5:
+                System.out.print("Digite o número: ");
+                n1 = leitor.nextDouble();
+                if (n1 >= 0) {
+                    resultado = Math.sqrt(n1);
+                    System.out.println("Raiz Quadrada: " + resultado);
+                } else {
+                    System.out.println("Erro: Não existe raiz de número negativo nos reais.");
+                }
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+
+        leitor.close();
+    }
+}
+

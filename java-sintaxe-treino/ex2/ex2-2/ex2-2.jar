@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ContadorMaioridade {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        int maiores = 0;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite a idade da " + i + "ª pessoa: ");
+            int idade = leitor.nextInt();
+
+            if (idade >= 18) {
+                maiores++;
+            }
+        }
+
+        System.out.println("Quantidade de pessoas com 18 anos ou mais: " + maiores);
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class FiltroArray {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int qtdPares = 0, qtdImpares = 0;
+        String pares = "", impares = "";
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número: ");
+            numeros[i] = leitor.nextInt();
+
+            if (numeros[i] % 2 == 0) {
+                qtdPares++;
+                pares += numeros[i] + " ";
+            } else {
+                qtdImpares++;
+                impares += numeros[i] + " ";
+            }
+        }
+
+        System.out.println("\na) Quantidade de pares: " + qtdPares);
+        System.out.println("b) Números pares: " + pares);
+        System.out.println("c) Quantidade de ímpares: " + qtdImpares);
+        System.out.println("d) Números ímpares: " + impares);
+    }
+}
